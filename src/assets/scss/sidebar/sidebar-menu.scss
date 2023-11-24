@@ -1,0 +1,37 @@
+#root-view {
+  .sidebar-menu-item {
+    @apply gap-0;
+    transition: gap 0.3s ease-in-out;
+
+    .secondary {
+      max-width: 0px;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &.shown {
+    .sidebar-menu-item {
+      @apply gap-2;
+      transition: gap 0.3s ease-in-out;
+
+      .secondary {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .title {
+    font-size: 0.6875rem;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgba(47, 43, 61, 0.68);
+    text-transform: uppercase;
+    &:hover {
+      color: #7cedff;
+    }
+  }
+}
